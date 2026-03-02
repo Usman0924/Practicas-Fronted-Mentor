@@ -1,0 +1,141 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: hsl(30, 54%, 90%);
+}
+
+body {
+    display: flex;
+    place-content: center;
+}
+
+.container {
+    max-width: 700px;
+    background-color: white;
+    padding: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    border-radius: 2rem;
+    font-family: 'Outfit';
+    font-size: 1rem;
+    color: hsl(30, 10%, 34%);
+}
+
+img {
+    width: 100%;
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h1,
+h3,
+h4,
+h5 {
+    font-family: 'Young Serif';
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+    color: hsl(24, 5%, 18%);
+    font-weight: 500;
+}
+
+ul,
+ol,
+li,
+p {
+    margin-bottom: 0.5rem;
+}
+
+ul,
+ol,
+p {
+    margin-bottom: 1.5rem;
+}
+
+.preparation-container {
+    background-color: hsl(330, 100%, 98%);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.preparation-title {
+    color: hsl(332, 51%, 32%);
+    margin-bottom: 1rem;
+}
+
+.preparation-list,
+.ingredient-list,
+.instru-list {
+    padding-left: 2rem;
+}
+
+.preparation-list li::marker {
+    color: hsl(332, 51%, 32%);
+}
+
+h3,
+h4,
+h5 {
+    color: hsl(14, 45%, 36%);
+    font-weight: 500;
+}
+
+.instru-list li::marker {
+    color: hsl(14, 45%, 36%);
+}
+
+.instru-list strong {
+    font-weight: 700;
+}
+
+hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.53);
+    margin-bottom: 1rem;
+}
+
+.nutri-list li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.nutri-list strong {
+    color: hsl(14, 45%, 36%);
+}
+
+@media (max-width:400px) {
+    html {
+        background-color: white;
+    }
+
+    .nutri-list li {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+    }
+
+    img {
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .container {
+        max-width: 700px;
+        background-color: white;
+        padding: 0;
+        font-family: 'Outfit';
+        font-size: 1rem;
+        color: hsl(30, 10%, 34%);
+    }
+}
