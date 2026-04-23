@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root{
+    --Purple-100: hsla(255, 88%, 90%);
+    --Purple-500: hsl(256, 67%, 59%);
+    --Yellow-100: hsl(31, 66%, 93%);
+    --Yellow-500: hsl(39, 100%, 71%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 7%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.6rem;
+    background-color: #f6f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+img{
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+
+p{
+    font-size: 1.8rem;
+}
+
+.grid{
+    width: 90%;
+    max-width: 100rem;
+    display: grid;
+    gap: 3rem;
+}
+
+.card{
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.card--hero{
+    background-color: var(--Purple-500);
+    padding: 5rem;
+    color: var(--White);
+}
+
+.card--hero .card__title{
+    font-size: 6rem;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 4rem;
+}
+
+.card--hero .card__title span{
+    color: var(--Yellow-500);
+}
+
+.card--hero .card__image{
+    width: 21rem;
+}
+
+.card--plataforms{
+    background-color: var(--White);
+    padding: 2rem;
+}
+
+.card--plataforms .card__description{
+    font-size: 3.3rem;
+    text-align: left;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.card--schedule{
+    background-color: var(--Yellow-500);
+    padding: 2rem 8rem 0 2rem;
+    text-align: left;
+    overflow: hidden;
+}
+
+.card--schedule .card__title{
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.card--schedule .card__image{
+    width: 30rem;
+    margin-bottom: -3rem;
+}
+
+.card--media{
+    background-color: var(--Purple-100);
+    padding: 4rem 2rem;
+}
+
+.card--media .card__title{
+    font-size: 3.3rem;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.card--media .card__description{
+    max-width: 38rem;
+    padding-top: 3rem;
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.card--followers{
+    background-color: var(--Purple-500);
+    padding: 3rem 7rem;
+    color: var(--White);
+}
+
+.card--followers .card__image{
+    margin-bottom: 4rem;
+}
+
+.card--followers .card__description{
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.card--audience{
+    background-color: var(--White);
+    padding: 4rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card--audience .card__metric{
+    font-size: 8rem;
+}
+
+.card--audience .card__description{
+    font-size: 2.4rem;
+}
+
+.card--audience .card__image{
+    width: 25rem;
+}
+
+.card--create{
+    background-color: var(--Yellow-100);
+    text-align: left;
+    padding: 4rem;
+}
+
+.card--create .card__title{
+    font-size: 3.8rem;
+    margin-bottom: 3rem;
+}
+
+.card--create .card__title span{
+    color: var(--Purple-500);
+}
+
+.card--create .card__image{
+    width: 25rem;
+}
+
+.card--ai{
+    background-color: var(--Yellow-500);
+    padding: 3rem;
+}
+
+.card--ai .card__title{
+    font-size: 4rem;
+    text-align: left;
+    line-height: 1;
+    padding-bottom: 3rem;
+}
+
+.card--ai .card__image{
+    width: 33rem;
+}
