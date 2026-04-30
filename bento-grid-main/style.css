@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
-:root{
+:root {
     --Purple-100: hsla(255, 88%, 90%);
     --Purple-500: hsl(256, 67%, 59%);
     --Yellow-100: hsl(31, 66%, 93%);
@@ -9,17 +9,20 @@
     --Black: hsl(0, 0%, 7%);
 }
 
-*{
-    padding: 0;
+*,
+*::before,
+*::after {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 62.5%;
+    height: 100%;
 }
 
-body{
+body {
     font-family: "DM Sans", sans-serif;
     font-size: 1.6rem;
     background-color: #f6f7fb;
@@ -27,118 +30,214 @@ body{
     justify-content: center;
     align-items: center;
     margin: 4rem 0;
+    line-height: 1;
+    min-height: 100%;
 }
 
-img{
+@media (min-width: 768px) {
+    body{
+        margin: 0;
+    }
+}
+
+img {
     display: block;
     width: 100%;
     object-fit: contain;
 }
 
-p{
+p {
     font-size: 1.8rem;
 }
 
-.grid{
+.container {
     width: 90%;
-    max-width: 100rem;
-    display: grid;
-    gap: 3rem;
+    max-width: 120rem;
+    margin: 0 auto;
 }
 
-.card{
+@media (min-width: 768px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-auto-rows: 12rem;
+        gap: 2rem;
+        padding: 0 3rem;
+    }
+}
+
+.card {
     border-radius: 2rem;
     text-align: center;
+    margin-bottom: 3rem;
+    max-height: 100%;
 }
 
-.card--hero{
+.card--hero {
     background-color: var(--Purple-500);
-    padding: 5rem;
+    padding: 4rem;
     color: var(--White);
 }
 
-.card--hero .card__title{
-    font-size: 6rem;
-    font-weight: 500;
-    line-height: 1;
-    margin-bottom: 4rem;
+@media (min-width: 768px) {
+    .card--create {
+        grid-column: 1/3;
+        grid-row: 1/5;
+    }
+
+    .card--ai {
+        grid-column: 1/3;
+        grid-row: 5/-1;
+    }
+
+    .card--hero {
+        grid-column: 3/7;
+        grid-row: 1/4;
+    }
+
+    .card--plataforms {
+        grid-column: 3/5;
+        grid-row: 4/6;
+    }
+
+    .card--schedule {
+        grid-column: 5/ 7;
+        grid-row: 4/6;
+    }
+
+    .card--media {
+        grid-column: 7/9;
+        grid-row: 1/6;
+    }
+
+    .card--audience {
+        grid-column: 3/5;
+        grid-row: 6/9;
+    }
+
+    .card--followers {
+        grid-column: 5/9;
+        grid-row: 6/9;
+    }
 }
 
-.card--hero .card__title span{
+.card--hero .card__title {
+    font-size: 4.5rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .card--hero .card__title {
+        font-size: 8rem;
+    }
+}
+
+.card--hero .card__title span {
     color: var(--Yellow-500);
 }
 
-.card--hero .card__image{
+.card--hero .card__image {
     width: 21rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
 }
 
-.card--plataforms{
+.card--plataforms {
     background-color: var(--White);
     padding: 2rem;
 }
 
-.card--plataforms .card__description{
+
+
+.card--plataforms .card__description {
     font-size: 3.3rem;
     text-align: left;
     font-weight: 500;
     margin-top: 1rem;
 }
 
-.card--schedule{
+.card--schedule {
     background-color: var(--Yellow-500);
     padding: 2rem 8rem 0 2rem;
     text-align: left;
     overflow: hidden;
 }
 
-.card--schedule .card__title{
+
+
+.card--schedule .card__title {
     font-size: 3.5rem;
     font-weight: 500;
-    line-height: 1;
     margin-bottom: 2rem;
 }
 
-.card--schedule .card__image{
+.card--schedule .card__image {
     width: 30rem;
     margin-bottom: -3rem;
 }
 
-.card--media{
+.card--media {
     background-color: var(--Purple-100);
     padding: 4rem 2rem;
+    text-align: center;
 }
 
-.card--media .card__title{
+@media (min-width: 768px) {
+    .card--media{
+        text-align: left;
+        overflow: hidden;
+    }
+
+    .card--media .card__image{
+        margin-left: 15rem;
+    }
+}
+
+.card--media .card__title {
     font-size: 3.3rem;
     margin-bottom: 3rem;
     font-weight: 500;
 }
 
-.card--media .card__description{
+.card--media .card__description {
     max-width: 38rem;
     padding-top: 3rem;
     font-size: 2.4rem;
-    text-align: center;
     margin: 0 auto;
 }
 
-.card--followers{
+.card--followers {
     background-color: var(--Purple-500);
     padding: 3rem 7rem;
     color: var(--White);
 }
 
-.card--followers .card__image{
+@media (min-width: 768px) {
+    .card--followers {
+        display: flex;
+    }
+}
+
+.card--followers .card__image {
     margin-bottom: 4rem;
 }
 
-.card--followers .card__description{
+@media (min-width: 768px) {
+    .card--followers .card__image {
+        margin-bottom: 0;
+        width: 40rem;
+    }
+}
+
+.card--followers .card__description {
     font-size: 4rem;
-    line-height: 1;
     font-weight: 500;
 }
 
-.card--audience{
+.card--audience {
     background-color: var(--White);
     padding: 4rem;
     text-align: left;
@@ -147,49 +246,43 @@ p{
     gap: 2rem;
 }
 
-.card--audience .card__metric{
+.card--audience .card__metric {
     font-size: 8rem;
 }
 
-.card--audience .card__description{
+.card--audience .card__description {
     font-size: 2.4rem;
 }
 
-.card--audience .card__image{
-    width: 25rem;
-}
-
-.card--create{
+.card--create {
     background-color: var(--Yellow-100);
     text-align: left;
     padding: 4rem;
 }
 
-.card--create .card__title{
+
+.card--create .card__title {
     font-size: 3.8rem;
     margin-bottom: 3rem;
 }
 
-.card--create .card__title span{
+.card--create .card__title span {
     color: var(--Purple-500);
 }
 
-.card--create .card__image{
+.card--create .card__image,
+.card--ai .card__image,
+.card--audience .card__image {
     width: 25rem;
 }
 
-.card--ai{
+.card--ai {
     background-color: var(--Yellow-500);
     padding: 3rem;
 }
 
-.card--ai .card__title{
+.card--ai .card__title {
     font-size: 4rem;
     text-align: left;
-    line-height: 1;
     padding-bottom: 3rem;
-}
-
-.card--ai .card__image{
-    width: 33rem;
 }
